@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DepartmentDao;
 import model.dao.daoFactory;
 import model.entities.Department;
@@ -15,8 +17,14 @@ public class DepartmentDaoTest {
 		System.out.println("Inserted! Department id: " + department.getId());*/
 		
 		System.out.println("\n==== TESTE 2: Department find by id ====");
-		 Department dep = departmentDao.findById(1);
-		 System.out.println(dep);
-	}
+		Department dep = departmentDao.findById(4);
+		System.out.println(dep);
+		
+		System.out.println("\n==== TESTE 2: Department find by id ====");
+		List<Department> departments = departmentDao.findAll();	
+		for(Department obj : departments) {
+			System.out.println(obj);
+		}
+		}
 
 }
