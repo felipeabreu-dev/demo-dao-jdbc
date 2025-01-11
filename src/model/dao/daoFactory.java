@@ -8,4 +8,5 @@ public class daoFactory {
 	public static SellerDao createSellerDao() {
 		return new SellerDaoJDBC(DB.getConnection());
 	}
+	
 }
