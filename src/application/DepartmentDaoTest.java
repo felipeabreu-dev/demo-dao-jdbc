@@ -29,6 +29,10 @@ public class DepartmentDaoTest {
 		System.out.println("\n==== TESTE 3: Department update ====");
 		dep.setName("Sports");
 		departmentDao.update(dep);
+		
+		System.out.println("\n==== TESTE 4: Department delete ====");
+		Department deleteDepartment = departmentDao.findById(5);
+		departmentDao.deleteById(deleteDepartment);
 	}
 
 }
